@@ -123,14 +123,14 @@ config.php    настройки подключения к БД (не попад
 ### Восстановление пароля: письмо со ссылкой
 ![Письмо](screenshots/08-reset-mail.png)
 
-## Выводы
-
-_TODO: что сделано, чему научился, что можно улучшить._
-
-## Ответы на контрольные вопросы
-
-_TODO: ответы на контрольные вопросы из задания._
-
 ## Список использованных источников
-
-_TODO: например, документация PHP (https://www.php.net/manual/ru/), документация MySQL, PHPMailer (https://github.com/PHPMailer/PHPMailer), Mailpit (https://mailpit.axllent.org)._
+1. PHP Manual. Функции для работы с паролями (`password_hash`, `password_verify`). https://www.php.net/manual/ru/book.password.php
+2. PHP Manual. PHP Data Objects (PDO). https://www.php.net/manual/ru/book.pdo.php
+3. PHP Manual. Сессии. https://www.php.net/manual/ru/book.session.php
+4. MySQL 8.0 Reference Manual. https://dev.mysql.com/doc/refman/8.0/en/
+5. OWASP Cheat Sheet Series. Forgot Password Cheat Sheet. https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html
+6. OWASP Cheat Sheet Series. Password Storage Cheat Sheet. https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
+7. OWASP Cheat Sheet Series. Cross-Site Request Forgery Prevention. https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html
+8. phpDocumentor. Документация по PHPDoc. https://docs.phpdoc.org/
+9. PHPMailer. Репозиторий и документация. https://github.com/PHPMailer/PHPMailer
+10. Mailpit. Документация. https://mailpit.axllent.org/
