@@ -87,6 +87,58 @@
 много поездок (связь «многие ко многим» через `bookings`). Удаление пользователя или поездки
 каскадно удаляет связанные записи. Полный скрипт: `sql/schema.sql`.
 
+### Схема связей (ER-диаграмма)
+
+```mermaid
+erDiagram
+    direction LR
+    users ||--o{ trips : "создаёт"
+    users ||--o{ bookings : "бронирует"
+    trips ||--o{ bookings : "содержит"
+    cities ||--o{ trips : "откуда"
+    cities ||--o{ trips : "куда"
+    users ||--o{ password_resets : "запрашивает"
+
+    users {
+        int id PK
+        varchar name
+        varchar email UK
+        varchar password_hash
+        enum role
+        timestamp created_at
+    }
+    cities {
+        int id PK
+        varchar name UK
+    }
+    trips {
+        int id PK
+        int user_id FK
+        int from_city_id FK
+        int to_city_id FK
+        date trip_date
+        time trip_time
+        tinyint seats
+        decimal price
+        tinyint luggage
+        varchar contact
+        text comment
+        timestamp created_at
+    }
+    bookings {
+        int id PK
+        int trip_id FK
+        int user_id FK
+        timestamp created_at
+    }
+    password_resets {
+        int id PK
+        int user_id FK
+        char token_hash
+        datetime expires_at
+    }
+```
+
 ## Структура проекта
 
 ```
